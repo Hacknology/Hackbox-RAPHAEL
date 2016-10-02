@@ -1,0 +1,402 @@
+Havij
+-----
+Version 1.17
+Advanced SQL Injection Tool
+Copyright © 2009-2012
+By r3dm0v3
+
+
+Contact
+-------
+WebSite: http://ITSecTeam.com
+Forum:   http://Forum.ITSecTeam.com
+Email:   Info@ITSecTeam.com
+
+
+Licence
+-------
+By installing and using this software you admit that have read and accept ITSecTeam product lisence agreement. You can download a copy of the lisence agreement from ITSecTeam website:
+http://www.itsecteam.com/products/havij-advanced-sql-injection/
+
+
+Disclaimer
+----------
+NEITHER ITSECTEAM, ITS STAKEHOLDERS, DEVELOPERS OF THIS PRODUCT NOR ANY OF THE STAFF THAT DIRECTLY OR INDIRECTLY CONTRIBUTED TO DELIVERY OF THIS PRODUCT CANNOT BE HELD RESPONSIBLE FOR THE CRIMINAL ACTIONS, LOSS OF DATA, LOSS OF PRIVACY AND FINANCIAL LOSSES OR OTHER LOSSES THAT MIGHT BE CAUSED THROUGH USE, MISUSE, OR ABUSE OF THIS PRODUCT.
+
+
+What's New?
+-----------
+• Dump all
+• New bypass method for MySQL using parenthesis
+• Write file feature added for MSSQL and MySQL.
+• Loading HTML form inputs 
+• Random signature generator
+• Saving data in CSV format 
+• Advanced evasion tab in the settings
+• Injection tab in settings
+• 'Non-existent injection value' can now be changed by user (the default value is 999999.9)
+• 'Comment mark' can be changed by user (the default value is --)
+• Disabling/enabling of logging
+• Bugfix: adding manual database in tables tree view
+• Bugfix: finding string columns in PostgreSQL
+• Bugfix: MS Access blind string type data extraction
+• Bugfix: MSSQL blind auto detection when error-based method fails
+• Bugfix: all database blind methods fail on retry
+• Bugfix: guessing columns/tables in MySQL time-based injection
+• Bugfix: crashing when dumping into file
+• Bugfix: loading project injection type (Integer or String)
+• Bugfix: HTTPS multi-threading bug
+• Bugfix: command execution in MSSQL 2005
+
+
+Features
+--------
+1. Supported Databases with injection methods:  
+ MSSQL 2000/2005 with error  
+ MSSQL 2000/2005 no-error union-based  
+ MSSQL blind  
+ MSSQL time-based  
+ MySQL union-based    
+ MySQL blind    
+ MySQL error-based    
+ MySQL time-based    
+ Oracle union-based    
+ Oracle error-based    
+ Oracle blind    
+ PostgreSQL union-based    
+ MS Access union-based    
+ MS Access blind    
+ Sybase (ASE)    
+ Sybase (ASE) Blind    
+2. HTTPS support    
+3. Multi-threading    
+4. Proxy support    
+5. Automatic database server detection    
+6. Automatic parameter type detection (string or integer)    
+7. Automatic keyword detection (finding the difference between positive and negative responses)    
+8. Automatic scan of all parameters.    
+9. Trying different injection syntaxes    
+10. Options for replacing space by /**/,+,... against IDS or filters    
+11. Avoids using strings (bypassing magic_quotes and similar filters)    
+12. Manual injection syntax support    
+13. Manual queries with result    
+14. Forcing illegal union    
+15. Random signature generator  
+16. Fully customizable HTTP headers (like referer, user agent...)    
+17. Loading cookie(s) from website for authentication    
+18. Load html form inputs  
+19. HTTP Basic and Digest authentication    
+20. Injecting URL rewrite pages    
+21. Bypassing ModSecurity web application firewall and similar firewalls    
+22. Bypassing WebKnight web application firewall and similar firewalls    
+23. Instant result    
+24. Guessing tables and columns in MySQL<5 (also in blind) and MS Access    
+25. Quick retrieval of tables and columns for MySQL    
+26. Resuming a previously saved table/column extraction session    
+27. Executing SQL query against an Oracle database    
+28. Custom keyword replacement in injections    
+29. Getting one complete row through a single request (all in one request)    
+30. Dumping data into file    
+31. Saving data as XML    
+32. Saving data as CSV format  
+33. Enabling xp_cmdshell and remote desktop    
+34. Multiple table/column extraction methods    
+35. Multi-threaded Admin page finder    
+36. Multi-threaded Online MD5 cracker    
+37. Getting DBMS information    
+38. Getting tables, columns and data    
+39. Command execution (MSSQL only)    
+40. Reading remote system files (MySQL only)    
+41. Creating/writing to a remote file (MySQL and MsSQL)  
+42. Insert/update/delete data    
+43. Unicode support  
+
+
+
+How to use
+----------
+You can use this utility to find and potentially exploit SQL Injection vulnerabilities in web application. To use this tool, some knowledge of SQL Injection - even though a basic one - is essential. Most of what you will have to do, in typical cases, will be to enter the URL of the suceptible page, selecting the applicable method clicking 'Analyze'. Almost everything needed to reveal and make use of the vulnerabilities is done by the utility. For best results, the URL should be one that returns a normal response (rather than one that returns a 4xx response).
+
+
+Version History
+---------------
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.17 ---------- 2012/12/09 -----------------------------------
+• ‘Injection’ tab added to the ‘Settings’ view.
+• 'Non-existent injection value' now can be changed by user (default value is 999999.9).
+• 'Comment mark' can be changed by user (default value is --).
+• Disabling/enabling the log.
+• ‘Advanced Evasion’ tab added to the ‘Settings’ view.
+• Random signature generator added.
+• New ability to save data as CSV.
+• Dump all feature added.
+• New bypass method for MySQL using parentheses.
+• Write file added for MySQL and MySQL.
+• Load HTML form inputs added.
+• Bugfix: adding manual database in tables tree view.
+• Bugfix: finding string column in PostgreSQL.
+• Bugfix: MS Access blind string type data extraction.
+• Bugfix: MSSQL blind auto detection when the MSSQL error-based method failed.
+• Bugfix: all database blind methods failed on retry.
+• Bugfix: guessing columns/tables in MySQL time-based injection method.
+• Bugfix: crashing when dumping into file.
+• Bugfix: loading project injection type (Integer or String).
+• Bugfix: HTTPS multi-threading bug.
+• Bugfix: command execution in MSSQL 2005
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.16 ---------- 2012/05/27 -----------------------------------
+• Multithreading added.
+• Blind SQL injection method on Oracle added.
+• Automatic scan of all parameters added.
+• New blind injection method (no more ‘?’ char).
+• Retry blind injection with new parameters.
+• A new method for table/column extraction in MSSQL blind injection.
+• WAF circumvention techniques for MySQL blind injection added.
+• Ability to retrieve tables and columns even when unable to get current database added.
+• Automatic logging added.
+• Bugfix: URL encoding.
+• Bugfix: attempt time-based methods when those based on MSSQL error and union fail.
+• Bugfix: clicking get columns would delete all tables.
+• Bugfix: resetting time based method delay when applying settings.
+• Bugfix: Oracle and PostgreSQL detection.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.15 ---------- 2011/06/08 -----------------------------------
+• WebKnight WAF circumvention added.
+• Improved ModSecurity circumvention added.
+• Unicode support added.
+• A new method for table/column extraction in MSSQL added.
+• Possibility to resume last table/column extraction session provided.
+• Custom replacement added to the settings.
+• Default injection value added to the settings (when using %Inject_Here%).
+• Table and column prefix added for blind injections.
+• Custom table and column list added.
+• Custom time out added.
+• A new MD5 cracker site added.
+• Bugfix: a bug relating to SELECT command.
+• Bugfix: finding string column.
+• Bugfix: getting multi-column data in MSSQL.
+• Bugfix: finding MySQL column count.
+• Bugfix: wrong syntax in injection string type in MS Access.
+• Bugfix: false positive results was removed.
+• Bugfix: data extraction in URL-encoded pages.
+• Bugfix: loading saved projects.
+• Bugfix: some errors in data extraction in MSSQL fixed.
+• Bugfix: a bug in MS Access when guessing tables and columns.
+• Bugfix: a bug when using proxy.
+• Bugfix: enabling remote desktop bug in windows server 2008 (thanks to pegasus315).
+• Bugfix: false positive in finding columns count.
+• Bugfix: when MSSQL error based method failed.
+• Bugfix: a bug in saving data.
+• Bugfix: Oracle and PostgreSQL detection.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.14 ---------- 2011/01/08 -----------------------------------
+• Sybase (ASE) database support added.
+• Sybase (ASE) Blind injection database added.
+• Time-based method for MSSQL implemented.
+• Time-based method for MySQL implemented.
+• ModSecurity WAF circumvention added.
+• Pause button added.
+• Basic authentication support added.
+• Digest authentication support added.
+• Post Data field added.
+• Injection into any part of an HTTP request, like Cookie, User-Agent, Referrer, etc. made available.
+• Injecting URL rewrite pages added.
+• Finding columns count in mysql when input value is non effective added.
+• Bugfix: bugs related to dot character (.) in database name.
+• Bugfix: syntax over writing when defined by user in blind injections.
+• Bugfix: MSSQL database detection from error when using JDBC driver.
+• Bugfix: time out bug in MD5 cracker.
+• Bugfix: default value bug.
+• Bugfix: string encoding bug in PostgreSQL
+• Bugfix: a bug in finding string column (specially for MySQL).
+• Bugfix: window resize bug in custom DPI setting.
+• Bugfix: some bugs in calculating row count.
+• Bugfix: getting database name in mssql error based when injection type is guessed integer but it's string fixed.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.13 ---------- 2010/11/03 -----------------------------------
+• Ability to get tables and columns when database name is not found added (MySQL).
+• Automatic keyword finder optimized and some bugs fixed.
+• “Key is not unique” bug fixed.
+• Keyword correction method enhanced.
+• A secondary method added when the input value doesn't return a normal page (usually 404: not found)
+• String or integer type detection enhanced.
+• New method added for finding column count and string columns in PostgreSQL.
+• Oracle error-based database added with ability to execute query.
+• Bugfix: bug in finding valid string column in MySQL.
+• Bugfix: getting data started from row 2 when All in One fails.
+• Bugfix: runtime error when finding keyword.
+• Bugfix: false table finding in access fixed.
+• Bugfix: a bug in getting current database in MSSQL fixed.
+• Bugfix: data extraction bug in HTML-encoded pages fixed.
+• Bugfix: a bug in HTTPS injection fixed.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.12 ---------- 2010/08/30 -----------------------------------
+• Check for updates added.
+• Enable XP_Exec feature added to cmdshell.
+• Enable OS_Ex feature added to cmdshell.
+• Enable Remote Desktop feature added to cmdshell.
+• Result added to manual queries.
+• PostgreSQL database added.
+• Broken MD5 cracker sites removed.
+• Bugfix: some bugs in MS Access injection when syntax is defined manually.
+• Bugfix: confusing MSSQL 2005 with MySQL when finding column count.
+
+----------------------------------------------------------------------------------------------------
+----------------------------------- 1.11 ---------- Not Released -----------------------------------
+• Finding column count and string column optimized for better injection and database detection.
+• Finding column count and string column enhanced.
+• Keyword test and correction method added.
+• MSSQL Blind added.
+• Clear log feature added.
+• Apply button added to the settings so it is possible to change the settings any time.
+• New method added for getting tables and columns in MSSQL.
+• MS Access Blind injection added.
+• Ability to inject targets through any port (default HTTP port is 80).
+• Support for HTTP added.
+• “All in one request” feature added.
+• Dump into File feature added.
+• Ability to save data in XML format added.
+• Bugfix: a bug in detecting MSSQL no error fixed.
+• Bugfix: a bug in getting columns in MSSQL no error fixed.
+• Bugfix: XSS bug in saved reports.
+• Bugfix: a bug in injecting into MS Access database fixed.
+• Bugfix: a bug in retrieving data in MSSQL fixed.
+• Bugfix: "414 Request-URI too long".
+• Bugfix: a bug in finding row count in MSSQL.
+• Bugfix: a bug in detecting database type when the column count is found.
+• Bugfix: a bug in MSSQL no error manual syntax and command execution.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.10 ---------- 2010/05/25 -----------------------------------
+• Broken sites in md5 cracker fixed, a new site added.
+• Tables and Columns list improved.
+• A few other changes.
+• Bugfix: runtime error on canceling Analyze.
+• Bugfix: bug in finding database in MSSQL when COLLATE is not supported.
+• Bugfix: bug in getting MSSQL tables.
+• Bugfix: HTML encoding bug when saving data.
+• Bugfix: bug in automatic string type detection.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.09 ---------- 2010/05/06 -----------------------------------
+• Application window made resizable.
+• Adding and removing nodes to Tables tree view list enabled by right click.
+• All databases could be viewed in the tree view list.
+• Start row in data extraction can be changed.
+• Saving and loading of current injection job enabled.
+• Start column added to settings.
+• Blind injection character set added to settings.
+• MSSQL injection syntax changed.
+• Brute forcing tables and columns in MySQL 4 blind injection enabled.
+• Improved injection in MSSQL.
+• Data retrieval in MySQL injection improved.
+• Find keyword feature improved.
+• MySQL detection by error added.
+• Positive pattern replaced with keyword.
+• Manual keyword specification.
+• Tables and Columns list improved.
+• Bugfix: bug in getting current database in MySQL.
+• Bugfix: bug in bypassing illegal union when getting tables and columns in MySQL.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.08 ---------- 2010/02/13 -----------------------------------
+• MySQL Blind Injection added.
+• Automatic detection of injection type added.
+• Trying different injection syntaxes made optional.
+• Following redirections made optional.
+• Admin list, Table list and Column list improved.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.07 ---------- 2009/12/08 -----------------------------------
+• Manual syntax for MySQL and MSSQL no error available.
+• Online MD5 cracker added.
+• Bugfix: finding column count and string column in MSSQL no error when type was string.
+• Bugfix: some bugs in Analyze method for MySQL.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.06 ---------- 2009/10/09 -----------------------------------
+• Finding string column in MySQL improved.
+• Oracle support added.
+• Bugfix: bug in Find Admin when the file list was huge (overflow error!).
+• Bugfix: bug in delete/update/insert when the database was not default.
+• Bugfix: retry bug in find admin.
+• “Load Cookie” option added to settings.
+
+----------------------------------------------------------------------------------------------------
+----------------------------------- 1.05 ---------- Not Released -----------------------------------
+• Support for proxy added.
+• Find Admin feature added.
+• Filter made available for MSSQL.
+• Bugfix: blind detection when target is not vulnerable and injection type is string.
+• MS Access database support added.
+• Finding column count and string column in MySQL enhanced.
+
+----------------------------------------------------------------------------------------------------
+----------------------------------- 1.04 ---------- Not Released -----------------------------------
+• Filtering option added to Get Data.
+• Data list changed.
+• Updating data enabled.
+• Delete row added.
+• Insert row added.
+• group_concat added.
+• Injection method for MySQL changed.
+• Program displays injection syntax after analysis.
+• 'User Agent' header added to settings.
+• Bugfix: bug in guessing tables and columns in MySQL<5.
+• Bugfix: guessing columns in MySQL.
+• Bugfix: bug with null strings when “avoid using strings” is enabled.
+• Bugfix: bug in getting data in MySQL when type is string.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.03 ---------- 2009/08/19 -----------------------------------
+• Bugfix: bug in getting info when COLLATE not allowed in MSSQL
+• Analysis method MySQL databases changed for.
+• Database server detection improved.
+• Injection using different syntaxes added.
+• Support for queries added.
+• Database server detection is now automated and user selective.
+• Injection of string type for double quotation mark added.
+• Bugfix: bugs in cmdshell.
+• Command execution for MSSQL no error enabled.
+• Bugfix: some minor bugs fixed.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.02 ---------- 2009/08/08 -----------------------------------
+• Access privilege detection added when retrieving data.
+• String type added.
+• “Do not find column count in MSSQL with error” option added to settings.
+• Another try for finding column count added.
+• Logging improved.
+• Support for redirects added.
+• Guessing tables and columns in MySQL<5 added.
+• A few other small changes. 
+• Bugfix: bug in getting tables fixed.
+• Bugfix: HTML encoding bug in MSSQL with error.
+• Bugfix: an error in getting HTTP response code.
+• Bugfix: bug in finding columns fixed.
+• Bugfix: command execution feature added.
+
+--------------------------------------------------------------------------------------------------
+----------------------------------- 1.01 ---------- 2009/07/25 -----------------------------------
+• Support for POST method added.
+• Ability to get the count of tables or columns before getting tables and columns.
+• “Replace space with …” option added to the settings.
+• “Additional HTTP headers” option added to the settings.
+• Positive pattern checking algorithm improved.
+• “Stop on error” option added.
+• A second method for detecting database server type added.
+• MSSQL no error database added.
+• New look (command buttons changed into menus)
+• Bugfix: problems with getting MySQL’s data tables.
+• Save option added.
+• Bugfix: bug in database 'MSSQL with error' when getting tables and columns with “Avoid using strings” option.
+• Some other small changes.
+
+------------------------------------------------------------------------------------------------------
+----------------------------------- 1.0 beta ---------- 2009/07/04 -----------------------------------
+• Initial release
