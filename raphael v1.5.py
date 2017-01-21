@@ -8,6 +8,8 @@ import os
 import platform
 import pygeoip
 import getpass
+import google
+import requests
 #v 1.1
 #coder: Hacknology
 def md5():
@@ -87,29 +89,29 @@ def py_modul_ekle():#Black Viking
     except:
         install(modul)
 def arama_Motoru():
-    def url_cek():
-        for url in google.search(dork, num=site_sayi, stop=1):
-            dosya = open("urller.txt", "a+")
-            dosya.write(url + "\n")
-    def url_tara():
-        liste = open("urller.txt", "r").readlines()
-        for urller in liste:
-            urller = urller.strip()
-            try:
-                r = requests.get(urller, timeout=5)
-            except(requests.exceptions.Timeout, requests.exceptions.ConnectionError):
-                continue
-            if r.status_code == 200:
-                yeni = r.url + "'"
-                conn = requests.get(yeni,timeout=5)
-                content = conn.text
+    site_sayi = int(input('[*]Site sayisini girin: '))
+dork = input("[*]SQL dorkunu girin: ")
+def url_cek():
+    for url in google.search(dork, num=site_sayi, stop=1):
+        dosya = open("urller.txt", "a+")
+        dosya.write(url + "\n")
+def url_tara():
+    liste = open("urller.txt", "r").readlines()
+    for urller in liste:
+        urller = urller.strip()
+        try:
+            r = requests.get(urller, timeout=5)
+        except(requests.exceptions.Timeout, requests.exceptions.ConnectionError):
+            continue
+        if r.status_code == 200:
+            yeni = r.url + "'"
+            conn = requests.get(yeni,timeout=5)
+            content = conn.text
             
-                if "Warning" or "Error" in content:
-                    print('[+]', urller, "sql acigi vardir!")
-                else:
-                    pass
-    url_cek()
-    url_tara()
+            if "Warning" or "Error" in content:
+                print('[+]', urller, "sql acigi vardir!")
+            else:
+                pass
 def crawler():
     url = input("[*]Id değeriyle birlikte url'yi giriniz: ")
     r = requests.get(url)
